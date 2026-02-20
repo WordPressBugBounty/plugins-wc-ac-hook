@@ -3,13 +3,13 @@
  * Plugin Name: WC-AC Hook
  * Plugin URI: https://wordpress.org/plugins/wc-ac-hook/
  * Description: Integrates WooCommerce with ActiveCampaign by adding or updating a contact on ActiveCampaign with specified tags, when an order is created.
- * Version: 1.4.2
+ * Version: 1.4.3
  * Author: Matthew Treherne
  * Author URI: https://profiles.wordpress.org/mtreherne
  * Text Domain: wc-ac-hook
  * Requires at least: 4.1.1
  * Requires PHP: 5.3
- * WC tested up to: 7.9.0
+ * WC tested up to: 10.5.2
  * License: GPL2
 */
 
@@ -47,6 +47,6 @@ if ( ! version_compare( PHP_VERSION, '5.3.0', '>=' ) ) {
 
 add_action('before_woocommerce_init', function() { if (class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility('custom_order_tables', __FILE__, true); });
 
-include_once 'includes/main-class.php';
+include_once dirname(__FILE__).'/includes/main-class.php';
 
 ?>

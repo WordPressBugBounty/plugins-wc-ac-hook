@@ -41,7 +41,7 @@ class WC_AC_Hook {
 	}
 
 	public function add_integration( $integrations ) {
-		include_once 'settings.php';
+		include_once dirname(__FILE__).'/settings.php';
 		$integrations[] = __NAMESPACE__ .'\WC_AC_Hook_Integration';
 		return $integrations;
 	}
@@ -106,7 +106,7 @@ class WC_AC_Hook {
 			$log_message[] = sprintf( __( 'Error: Invalid customer (billing) email address = %s', 'wc-ac-hook' ), $order_billing_email);
 		}
 		if ($valid_order) {
-			include_once 'sync-contact.php';
+			include_once dirname(__FILE__).'/sync-contact.php';
 			$api = new WC_AC_Hook_Sync($options);
 		}
 		

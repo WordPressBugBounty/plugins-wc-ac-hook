@@ -3,13 +3,13 @@ Contributors: mtreherne
 Tags: WooCommerce, ActiveCampaign
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=matt@sendmail.me.uk&currency_code=GBP&item_name=Donation+for+WC-AC+Hook
 Requires at least: 4.1.1
-Tested up to: 6.8
+Tested up to: 6.9
 Requires PHP: 5.3
-Stable tag: 1.4.2
+Stable tag: 1.4.3
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Integrates WooCommerce with ActiveCampaign by adding or updating a contact on ActiveCampaign with specified tags, when an order is created at checkout.
+Integrates WooCommerce with ActiveCampaign by adding or updating a contact on ActiveCampaign with specified tags, when an order is created at checkout
 
 == Description ==
 
@@ -114,6 +114,9 @@ Yes you can add multiple ActiveCampaign tags to a product separated by commas. N
 2. Advanced product data fields when editing 'Products'
 
 == Changelog ==
+
+= 1.4.3 =
+* Fix to replace relative path with `dirname(__FILE__)` to ensure correct code included
 
 = 1.4.2 =
 * Fix to stop PHP notices
